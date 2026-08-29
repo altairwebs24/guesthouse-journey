@@ -53,12 +53,11 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const rates = [
-  { label: "1 Hour", price: "R100", note: "Short stay" },
-  { label: "2 Hours", price: "R150", note: "Short stay" },
-  { label: "3 Hours", price: "R200", note: "Short stay" },
-  { label: "Day or Night", price: "R350", note: "Full room, day or night", featured: true },
-  { label: "Whole Place", price: "R3000", note: "Book everything, day/night" },
+const roomRates = [
+  { label: "1 hour", price: "R100" },
+  { label: "2 hours", price: "R150" },
+  { label: "3 hours", price: "R200" },
+  { label: "Day or night", price: "R350" },
 ];
 
 const amenities = [
@@ -89,18 +88,23 @@ const roomPairs = [
   },
 ];
 
-const exteriorPair = {
-  images: [
-    { src: gateDay.url, alt: "Urban Field Guest House signage on the secure entrance gate during the day" },
-    { src: entranceWifi.url, alt: "Room entrance with free WiFi sign, DSTV dishes and air conditioning unit" },
-  ],
-  caption: "A fully gated and walled property with secure parking, private room entrances and free WiFi throughout.",
-};
-
-const courtyard = {
-  src: courtyardNight.url,
-  alt: "Lit paved courtyard and room doors at Urban Field Guest House at night",
-};
+const placeSlides = [
+  {
+    src: gateDay.url,
+    alt: "Urban Field Guest House signage on the secure entrance gate during the day",
+    caption: "A fully gated and walled entrance with secure parking inside the yard.",
+  },
+  {
+    src: entranceWifi.url,
+    alt: "Room entrance with free WiFi sign, DSTV dishes and air conditioning unit",
+    caption: "Every room has its own private entrance, free WiFi, DSTV and air conditioning.",
+  },
+  {
+    src: courtyardNight.url,
+    alt: "Lit paved courtyard and room doors at Urban Field Guest House at night",
+    caption: "The courtyard is lit up after dark and the gate never closes — arrive whenever suits you, we're open 24 hours.",
+  },
+];
 
 function waLink(message: string) {
   return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`;
