@@ -77,11 +77,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Urban Field Guest House" },
+      {
+        name: "description",
+        content: "Urban Field Guest House — affordable 24-hour rooms in Matsulu, Mpumalanga.",
+      },
+      { name: "author", content: "Urban Field Guest House" },
+      { property: "og:title", content: "Urban Field Guest House" },
+      {
+        property: "og:description",
+        content: "Urban Field Guest House — affordable 24-hour rooms in Matsulu, Mpumalanga.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
