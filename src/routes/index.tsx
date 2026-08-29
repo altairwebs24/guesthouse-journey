@@ -200,9 +200,9 @@ function Index() {
           <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-card/70 px-4 py-1.5 text-xs font-medium tracking-[0.2em] text-primary uppercase">
             <Clock className="h-3.5 w-3.5" /> Open 24 hours
           </p>
-          <h1 className="mt-5 text-4xl font-bold tracking-[0.12em] uppercase sm:text-6xl">
+          <h1 className="mt-5 font-display text-4xl tracking-[0.08em] uppercase sm:text-6xl">
             Urban Field
-            <span className="mt-1 block text-lg font-medium tracking-[0.45em] text-primary sm:text-2xl">
+            <span className="mt-2 block font-script text-4xl font-normal tracking-normal text-primary normal-case sm:text-5xl">
               Guest House
             </span>
           </h1>
@@ -446,8 +446,8 @@ function Index() {
 function SectionTitle({ eyebrow, title }: { eyebrow: string; title: string }) {
   return (
     <div>
-      <p className="text-xs font-semibold tracking-[0.35em] text-primary uppercase">{eyebrow}</p>
-      <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>
+      <p className="font-script text-3xl text-primary sm:text-4xl">{eyebrow}</p>
+      <h2 className="mt-1 font-display text-3xl tracking-wide uppercase sm:text-4xl">{title}</h2>
     </div>
   );
 }
