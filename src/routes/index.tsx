@@ -18,7 +18,7 @@ import {
   X,
 } from "lucide-react";
 
-const IMG_BASE = `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/site-images`;
+const IMG_BASE = `${import.meta.env["VITE_SUPABASE_URL"]}/storage/v1/object/public/site-images`;
 const logo = { url: `${IMG_BASE}/logo.jpg` };
 const gateDay = { url: `${IMG_BASE}/gate-day.jpg` };
 const entranceWifi = { url: `${IMG_BASE}/entrance-wifi.jpg` };
