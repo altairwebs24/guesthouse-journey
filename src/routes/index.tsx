@@ -232,19 +232,51 @@ function Index() {
       {/* Rooms */}
       <section className="mx-auto max-w-6xl px-5 py-16" id="rooms">
         <SectionTitle eyebrow="Gallery" title="Our rooms" />
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          {rooms.map((img) => (
-            <GalleryImage key={img.src} img={img} onOpen={setLightbox} className="aspect-[4/3]" />
+        <div className="mt-8 space-y-10">
+          {roomPairs.map((pair, i) => (
+            <div key={i}>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {pair.images.map((img) => (
+                  <GalleryImage key={img.src} img={img} onOpen={setLightbox} className="aspect-[4/3]" />
+                ))}
+              </div>
+              <p className="mt-4 max-w-2xl text-sm text-muted-foreground sm:text-base">
+                <span className="font-script text-2xl text-primary sm:text-3xl">Room {i + 1 === 1 ? "comfort" : "extras"}</span>
+                <span className="mt-1 block">{pair.caption}</span>
+              </p>
+            </div>
           ))}
         </div>
 
-        <h3 className="mt-14 text-sm font-semibold tracking-[0.3em] text-primary uppercase">
+        <h3 className="mt-14 font-display text-sm tracking-[0.3em] text-primary uppercase">
           The place
         </h3>
-        <div className="mt-5 grid gap-4 sm:grid-cols-3">
-          {exterior.map((img) => (
-            <GalleryImage key={img.src} img={img} onOpen={setLightbox} className="aspect-[4/3]" />
-          ))}
+        <div className="mt-5 space-y-10">
+          <div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {exteriorPair.images.map((img) => (
+                <GalleryImage key={img.src} img={img} onOpen={setLightbox} className="aspect-[4/3]" />
+              ))}
+            </div>
+            <p className="mt-4 max-w-2xl text-sm text-muted-foreground sm:text-base">
+              <span className="font-script text-2xl text-primary sm:text-3xl">Safe &amp; private</span>
+              <span className="mt-1 block">{exteriorPair.caption}</span>
+            </p>
+          </div>
+          <div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <GalleryImage img={courtyard} onOpen={setLightbox} className="aspect-[4/3]" />
+              <div className="flex items-center rounded-2xl border border-border bg-card p-6">
+                <p className="text-sm text-muted-foreground sm:text-base">
+                  <span className="font-script text-2xl text-primary sm:text-3xl">Day or night</span>
+                  <span className="mt-1 block">
+                    The courtyard is lit up after dark and the gate never closes — arrive whenever
+                    suits you, we're open 24 hours.
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
