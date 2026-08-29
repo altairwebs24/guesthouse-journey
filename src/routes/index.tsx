@@ -72,18 +72,35 @@ const amenities = [
   { icon: Clock, label: "Open 24 hours" },
 ];
 
-const rooms = [
-  { src: roomBlue.url, alt: "Guest room with double bed, wooden slat feature wall and wall-mounted TV" },
-  { src: roomSlate.url, alt: "Guest room with black slat headboard wall, bedside tables and flat-screen TV" },
-  { src: roomPurple.url, alt: "Guest room with purple bedding, air conditioner and window blinds" },
-  { src: roomAircon.url, alt: "Guest room interior showing air conditioner, bar fridge and private door" },
+const roomPairs = [
+  {
+    images: [
+      { src: roomBlue.url, alt: "Guest room with double bed, wooden slat feature wall and wall-mounted TV" },
+      { src: roomSlate.url, alt: "Guest room with black slat headboard wall, bedside tables and flat-screen TV" },
+    ],
+    caption: "Every room is private and en-suite, with a comfortable double bed, fresh linen and a flat-screen TV with DSTV.",
+  },
+  {
+    images: [
+      { src: roomPurple.url, alt: "Guest room with purple bedding, air conditioner and window blinds" },
+      { src: roomAircon.url, alt: "Guest room interior showing air conditioner, bar fridge and private door" },
+    ],
+    caption: "Air conditioning, a bar fridge and your own private entrance — everything you need for a short rest or a full night.",
+  },
 ];
 
-const exterior = [
-  { src: gateDay.url, alt: "Urban Field Guest House signage on the secure entrance gate during the day" },
-  { src: entranceWifi.url, alt: "Room entrance with free WiFi sign, DSTV dishes and air conditioning unit" },
-  { src: courtyardNight.url, alt: "Lit paved courtyard and room doors at Urban Field Guest House at night" },
-];
+const exteriorPair = {
+  images: [
+    { src: gateDay.url, alt: "Urban Field Guest House signage on the secure entrance gate during the day" },
+    { src: entranceWifi.url, alt: "Room entrance with free WiFi sign, DSTV dishes and air conditioning unit" },
+  ],
+  caption: "A fully gated and walled property with secure parking, private room entrances and free WiFi throughout.",
+};
+
+const courtyard = {
+  src: courtyardNight.url,
+  alt: "Lit paved courtyard and room doors at Urban Field Guest House at night",
+};
 
 function waLink(message: string) {
   return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`;
