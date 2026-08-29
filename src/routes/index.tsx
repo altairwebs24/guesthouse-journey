@@ -18,14 +18,15 @@ import {
   X,
 } from "lucide-react";
 
-import logo from "@/assets/logo.jpg.asset.json";
-import gateDay from "@/assets/gate-day.jpg.asset.json";
-import entranceWifi from "@/assets/entrance-wifi.jpg.asset.json";
-import courtyardNight from "@/assets/courtyard-night.jpg.asset.json";
-import roomPurple from "@/assets/room-purple.jpg.asset.json";
-import roomAircon from "@/assets/room-aircon.jpg.asset.json";
-import roomBlue from "@/assets/room-blue.jpg.asset.json";
-import roomSlate from "@/assets/room-slate.jpg.asset.json";
+const IMG_BASE = `${import.meta.env["VITE_SUPABASE_URL"]}/storage/v1/object/public/site-images`;
+const logo = { url: `${IMG_BASE}/logo.jpg` };
+const gateDay = { url: `${IMG_BASE}/gate-day.jpg` };
+const entranceWifi = { url: `${IMG_BASE}/entrance-wifi.jpg` };
+const courtyardNight = { url: `${IMG_BASE}/courtyard-night.jpg` };
+const roomPurple = { url: `${IMG_BASE}/room-purple.jpg` };
+const roomAircon = { url: `${IMG_BASE}/room-aircon.jpg` };
+const roomBlue = { url: `${IMG_BASE}/room-blue.jpg` };
+const roomSlate = { url: `${IMG_BASE}/room-slate.jpg` };
 
 const LAT = -25.530889;
 const LNG = 31.315694;
